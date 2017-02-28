@@ -19,7 +19,7 @@ namespace HelperBot
         #region Info
         public override string Name { get { return "HelperBot"; } }
         public override string Author { get { return "Ryozuki"; } }
-        public override string Description { get { return "A bot with multiple utilities, such as stats gathering and custom commands made in js."; } }
+        public override string Description { get { return "A bot with multiple utilities, such as stats gathering and a Q&A system."; } }
         public override Version Version { get { return new Version(1, 0, 0); } }
         #endregion
 
@@ -31,13 +31,6 @@ namespace HelperBot
 
         public HelperBot(Main game) : base(game)
         {
-            /*
-             * TODO:
-             * - Add more features
-             * 
-             * Feature ideas:
-             * - Games?
-             */
         }
 
         private void LoadConfig()
