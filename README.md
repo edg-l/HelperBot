@@ -2,7 +2,7 @@
 A TShock plugin
 
 ## Commands
-- /hb <command>
+- /hb \<command>
 
 ## Permissions
 - helperbot.cmds
