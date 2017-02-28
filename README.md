@@ -4,6 +4,9 @@ A TShock plugin
 ## Commands
 - /hb \<command>
 
+Current /hb commands:
+- stats \<name> (Sends to you stats about that player)
+
 ## Permissions
 - helperbot.cmds
 
