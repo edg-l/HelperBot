@@ -86,12 +86,15 @@
     <Compile Include="PTime.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="References\Mono.Data.Sqlite.dll" />
-    <Content Include="References\MySql.Data.dll" />
-    <Content Include="References\Newtonsoft.Json.dll" />
-    <Content Include="References\OTAPI.dll" />
-    <Content Include="References\TerrariaServer.exe" />
-    <Content Include="References\TShockAPI.dll" />
+    <Content Include="tshock-references\Mono.Data.Sqlite.dll" />
+    <Content Include="tshock-references\MySql.Data.dll" />
+    <Content Include="tshock-references\Newtonsoft.Json.dll" />
+    <Content Include="tshock-references\OTAPI.dll" />
+    <Content Include="tshock-references\TerrariaServer.exe" />
+    <Content Include="tshock-references\TShockAPI.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="tshock-references\README.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -13,7 +13,7 @@ using System.Timers;
 
 namespace HelperBot
 {
-    [ApiVersion(2, 0)]
+    [ApiVersion(2, 1)]
     public class HelperBot : TerrariaPlugin
     {
         #region Info
@@ -46,8 +46,8 @@ namespace HelperBot
             ServerApi.Hooks.GamePostInitialize.Register(this, OnPostInitialize);
             ServerApi.Hooks.ServerChat.Register(this, onChat, -666);
             ServerApi.Hooks.NetGetData.Register(this, onGetData);
-            TShockAPI.Hooks.PlayerHooks.PlayerPostLogin += PlayerHooks_PlayerPostLogin;
-            TShockAPI.Hooks.PlayerHooks.PlayerLogout += PlayerHooks_PlayerLogout;
+            PlayerHooks.PlayerPostLogin += PlayerHooks_PlayerPostLogin;
+            PlayerHooks.PlayerLogout += PlayerHooks_PlayerLogout;
 
             sTimer.Elapsed += Second_Elapsed;
             sTimer.Interval = 1000;
@@ -62,8 +62,8 @@ namespace HelperBot
                 ServerApi.Hooks.GamePostInitialize.Deregister(this, OnPostInitialize);
                 ServerApi.Hooks.ServerChat.Deregister(this, onChat);
                 ServerApi.Hooks.NetGetData.Deregister(this, onGetData);
-                TShockAPI.Hooks.PlayerHooks.PlayerPostLogin -= PlayerHooks_PlayerPostLogin;
-                TShockAPI.Hooks.PlayerHooks.PlayerLogout -= PlayerHooks_PlayerLogout;
+                PlayerHooks.PlayerPostLogin -= PlayerHooks_PlayerPostLogin;
+                PlayerHooks.PlayerLogout -= PlayerHooks_PlayerLogout;
             }
             base.Dispose(disposing);
         }        

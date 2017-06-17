@@ -1,0 +1,3 @@
+[submodule "HelperBot/tshock-references"]
+	path = HelperBot/tshock-references
+	url = https://github.com/Ryozuki/tshock-references
