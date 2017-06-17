@@ -35,20 +35,20 @@ namespace HelperBot
 
                 config.QuestionsAndAnswers.Add(new QA()
                 {
-                    Question = @"(H|h)ow (can i|to) register(\?|)",
-                    Answer = string.Format("Use {0}spawn!", TShock.Config.CommandSpecifier)
+                    Question = @"How (can i|to) register(\?|)",
+                    Answer = string.Format("Use {0}register <password>", TShock.Config.CommandSpecifier)
                 });
 
                 config.QuestionsAndAnswers.Add(new QA()
                 {
-                    Question = @"(H|h)ow (do i go|i go) to the spawn(\?|)",
-                    Answer = string.Format("Use {0}spawn!", TShock.Config.CommandSpecifier)
+                    Question = @"How i go to the spawn(\?|)",
+                    Answer = string.Format("Use {0}spawn", TShock.Config.CommandSpecifier)
                 });
 
                 config.QuestionsAndAnswers.Add(new QA()
                 {
-                    Question = @"(W|w)ho (made|created|coded) the (H|h)elper(B|b)ot(\?|)",
-                    Answer = "Ryozuki made it, you can find his web here: teeland.ovh"
+                    Question = @"who (made|created|coded) the helperbot(\?|)",
+                    Answer = "Ryozuki, you can find his web here: teeland.ovh"
                 });
 
                 File.WriteAllText(path, JsonConvert.SerializeObject(config, Formatting.Indented));

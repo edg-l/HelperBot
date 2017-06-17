@@ -72,9 +72,9 @@ namespace HelperBot
 
             msg = msg.ToLower();
 
-            if (Config.QuestionsAndAnswers.Any(x => Regex.Match(msg, x.Question).Success == true))
+            if (Config.QuestionsAndAnswers.Any(x => Regex.Match(msg.ToLower(), x.Question.ToLower()).Success == true))
             {
-                var answer = Config.QuestionsAndAnswers.Find(x => Regex.Match(msg, x.Question).Success == true).Answer;
+                var answer = Config.QuestionsAndAnswers.Find(x => Regex.Match(msg.ToLower(), x.Question.ToLower()).Success == true).Answer;
 
                 var colorarr = Config.BotColor.Split(',');
                 try
