@@ -55,8 +55,6 @@ namespace HelperBot
         #region Hooks
         private void OnInitialize(EventArgs args)
         {
-            DB.Connect();
-
             Commands.ChatCommands.Add(new Command("helperbot.cmds", CommandHandler, Config.BaseCommandName)
             {
                 HelpText = string.Format("Usage: {0}{1} <command>", TShock.Config.CommandSpecifier, Config.BaseCommandName)
@@ -124,6 +122,9 @@ namespace HelperBot
         #region Commands
         private void CommandHandler(CommandArgs e)
         {
+            if (Config.EnableBotCommands == false)
+                return;
+
             var ply = e.Player;
             var cmd = "";
 
@@ -140,7 +141,6 @@ namespace HelperBot
 
             switch (cmd)
             {
-                case "stats":
                 default:
                     {
                         ply.SendMessage(String.Format("[PM] {0}: Usage: {1}{2} <command>",
@@ -148,7 +148,7 @@ namespace HelperBot
                                 TShock.Config.CommandSpecifier,
                                 Config.BaseCommandName),
                                 r, g, b);
-                        ply.SendMessage(String.Format("[PM] {0}: Commands: stats",
+                        ply.SendMessage(String.Format("[PM] {0}: Commands: (no commands, WIP)",
                                 Config.BotName),
                                 r, g, b);
                         break;

@@ -16,6 +16,7 @@ namespace HelperBot
         public string BotName = "HelperBot";
         public string BaseCommandName = "hb";
         public string BotColor = "69,201,210";
+        public bool EnableBotCommands = true;
 
         public class QA
         {
