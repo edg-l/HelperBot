@@ -13,6 +13,8 @@ Current /hb commands:
 ## Question & Answer system
 You can add as many questions with their answers as you want, check the generated file (after first run) called HelperBot.json
 
+Note: Questions are matched case insensitive.
+
 You can use regex on the questions, don't know what regex is? See [here](https://en.wikipedia.org/wiki/Regular_expression)
 
 Here you can find a regex tutorial: [link](https://regexone.com/)
