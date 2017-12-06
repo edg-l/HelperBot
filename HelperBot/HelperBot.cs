@@ -95,6 +95,10 @@ namespace HelperBot
                 {
                     // invalid operation
                 }
+                catch (System.Data.SyntaxErrorException)
+                {
+                    // invalid operation
+                }
             }
             else if(ReminderRegex.IsMatch(msg) && ply.HasPermission("helperbot.remind"))
             {
