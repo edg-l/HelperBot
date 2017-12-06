@@ -12,10 +12,9 @@ namespace HelperBot
     public class ConfigFile
     {
         // Config variables here:
-        public string PluginName = "HelperBot";
         public string BotName = "HelperBot";
         public string BaseCommandName = "hb";
-        public string BotColor = "69,201,210";
+        public int[] BotColor = { 69, 201, 210 };
         public bool EnableBotCommands = true;
 
         public class QA
@@ -48,7 +47,7 @@ namespace HelperBot
                 config.QuestionsAndAnswers.Add(new QA()
                 {
                     Question = @"who (made|created|coded) the helperbot(\?|)",
-                    Answer = "Ryozuki, you can find his web here: teeland.ovh"
+                    Answer = "Ryozuki, you can find his web here: ryobyte.com"
                 });
 
                 File.WriteAllText(path, JsonConvert.SerializeObject(config, Formatting.Indented));
